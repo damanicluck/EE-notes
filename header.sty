@@ -3,6 +3,7 @@
 % Packages Used
 %===============================================================
 %%%%%% Copied from ee16.sty
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 \usepackage{amsmath,textcomp,enumerate,mathtools,etoolbox}
 \usepackage{pgfplots}
 \usepackage{times,latexsym,comment,latexsym,epsf,amssymb,graphicx,url,amsmath,amsfonts,textcomp}
@@ -25,6 +26,7 @@
 \font\dunhb=cmdunh10 scaled \magstep2
 \font\dunha=cmdunh10 scaled \magstep2
 \date{}
+\usepackage{amsthm}
 \usepackage{changepage}
 \usepackage{tikz}
 \usetikzlibrary{calc}
@@ -41,6 +43,7 @@
 \usepackage{cancel}
 \usepackage{commath}
 \usepackage{mathdots}
+\usepackage[framemethod=TikZ]{mdframed}
 \usepackage{subcaption}
 \usepackage[american,siunitx]{circuitikz}
 \sisetup{per-mode=fraction}
@@ -104,7 +107,7 @@
 \newcommand{\semester}[1]{\newcommand{\sem}{#1}}
 \def\semester{Fall 2023}
 
-% Following environments are for emphasis within the document
+% Following environments are for emphasis within the document 
 \newenvironment{define}
     {\begin{tcolorbox}[
         title=Definition,
@@ -129,56 +132,92 @@
         ]}
     {\end{tcolorbox}}
 
+% adapted from https://tex.stackexchange.com/questions/296463/how-to-create-theorem-boxes
+\usepackage{amsmath}
+\usepackage{cleveref}
+\usepackage[most]{tcolorbox}
+
+\newtcbtheorem[no counter]{Define}{Definition}{
+  enhanced,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=blue!25,
+  fonttitle=\bfseries,
+  coltitle=black,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=blue!25,
+    colframe=blue!25,
+  } 
+}{prf}
+
 % copied from : https://tex.stackexchange.com/questions/481532star-wye-electrical-connection-math-symbol
 \newcommand\wye{\scalerel*{\stackengine{-1pt}{%
   \rotatebox[origin=c]{30}{\rule{10pt}{.9pt}}\kern-1pt%
   \rotatebox[origin=c]{-30}{\rule{10pt}{1.3pt}}}{%
   \rule{.9pt}{10pt}}{O}{c}{F}{F}{S}}{\Delta}}
 
+
+
+% used for listing things
+\newenvironment{pline}{\begin{itemize}}{\end{itemize}}
+% used for equations
+\newenvironment{gline}{\begin{itemize}}{\end{itemize}}
+\newenvironment{todo}{\begin{enumerate}}{\end{enumerate}}
+
 % FROM BRANDON: https://github.com/Bransthre/eecs127-notes/blob/main/ln.sty changed colors but i want to be able to 
-\definecolor{silver}{rgb}{0.75, 0.75, 0.75}
-\definecolor{ice}{rgb}{0.44, 0.65, 0.82}
-\definecolor{mayablue}{rgb}{0.45, 0.76, 0.98}
-\definecolor{lavenderblue}{rgb}{0.8, 0.8, 1.0}
-\usepackage[many]{tcolorbox}
-\tcbuselibrary{skins, breakable, theorems}
-\newenvironment{bindenum}{\begin{itemize}}{\end{itemize}}
-\tcolorboxenvironment{bindenum}
+% \definecolor{silver}{rgb}{0.75, 0.75, 0.75}
+% \definecolor{ice}{rgb}{0.44, 0.65, 0.82}
+% \definecolor{mayablue}{rgb}{0.45, 0.76, 0.98}
+% \definecolor{lavenderblue}{rgb}{0.8, 0.8, 1.0}
+% \usepackage[many]{tcolorbox}
+% \tcbuselibrary{skins, breakable, theorems}
+\tcolorboxenvironment{pline}
   {blanker, before skip = 6pt, after skip = 6pt,
-    borderline west = {1mm}{0pt}{blue!65!black!45!}}
-\newtcbtheorem[number within=section]{ln-theorem}{Theorem}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = cyan,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-define}{Definition}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = ice!85!black!70!,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-symbol}{Symbol}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = mayablue!70!black!95!,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-fig}{Figure}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = lavenderblue!70!black!95!,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-explain}{Explain}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = violet,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-todo}{Todo}%
-  {enhanced, breakable,
-    colback = white, colframe = silver!40!black!60!, colbacktitle = violet!70!black!90!,
-    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-    boxed title style = {sharp corners}, separator sign = {.}}{}
-\newtcbtheorem[number within=section]{ln-quest}{Example Question}%
-{enhanced, breakable, colback=ice!5,colframe=ice!35!black!55!}{}
-\newtcbtheorem[number within=section]{ln-think}{Exercise Reader! Exercise!}%
-{enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
-\newtcbtheorem[number within=section]{ln-practice}{Practice}%
-{enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
+    borderline west = {1mm}{0pt}{blue!45!black!15!red!45!}}
+\tcolorboxenvironment{gline}
+  {blanker, before skip = 6pt, after skip = 6pt,
+    borderline west = {1mm}{0pt}{green!65!black!45!}}
+\tcolorboxenvironment{todo}
+  {blanker, before skip = 6pt, after skip = 6pt,
+    borderline west = {1mm}{0pt}{red!100!}}
+% \newtcbtheorem[number within=section]{ln-theorem}{Theorem}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = cyan,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-define}{Definition}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = ice!85!black!70!,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-symbol}{Symbol}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = mayablue!70!black!95!,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-fig}{Figure}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = lavenderblue!70!black!95!,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-explain}{Explain}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = violet,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-todo}{Todo}%
+%   {enhanced, breakable,
+%     colback = white, colframe = silver!40!black!60!, colbacktitle = violet!70!black!90!,
+%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+%     boxed title style = {sharp corners}, separator sign = {.}}{}
+% \newtcbtheorem[number within=section]{ln-quest}{Example Question}%
+% {enhanced, breakable, colback=ice!5,colframe=ice!35!black!55!}{}
+% \newtcbtheorem[number within=section]{ln-think}{Exercise Reader! Exercise!}%
+% {enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
+% \newtcbtheorem[number within=section]{ln-practice}{Practice}%
+% {enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
