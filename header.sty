@@ -138,7 +138,7 @@
 \usepackage{cleveref}
 \usepackage[most]{tcolorbox}
 
-\newtcbtheorem[no counter]{Define}{Analysis}{
+\newtcbtheorem[no counter]{Analysis}{Analysis}{
   enhanced,
   sharp corners,
   attach boxed title to top left={
@@ -169,6 +169,7 @@
 % used for equations
 \newenvironment{gline}{\begin{itemize}}{\end{itemize}}
 \newenvironment{todo}{\begin{enumerate}}{\end{enumerate}}
+\newenvironment{Ans}{\newline \color{blue}}{} 
 
 % FROM BRANDON: https://github.com/Bransthre/eecs127-notes/blob/main/ln.sty changed colors but i want to be able to 
 % \definecolor{silver}{rgb}{0.75, 0.75, 0.75}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1714382484 "/Users/damanic/Desktop/EE-notes/main.tex" "main.pdf" "main" 1714382486 0
-  "/Users/damanic/Desktop/EE-notes/main.tex" 1714382482 914 e476ba6020a2ed45e0d5fc9b56b153b4 ""
+["pdflatex"] 1714447512 "/Users/damanic/Desktop/EE-notes/main.tex" "main.pdf" "main" 1714447514 0
+  "/Users/damanic/Desktop/EE-notes/main.tex" 1714447511 804 46799fbd88747c95df1de4c4c8b890ee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -45,6 +45,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
@@ -381,14 +382,15 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694045506 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694045440 7883463 2d91edad6a1f92cc5fb62cecd6a7fb7a ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "chapters/ch01.tex" 1714382482 5157 e346e60b780753be8a180c0c835d2e9d ""
+  "chapters/ch01.tex" 1714447471 9747 4ebdef1ee3ca4ed8f603af85717da0fe ""
   "chapters/ch02.tex" 1714382123 622 6ce2fcf9456d9f9102c6e02d096278a6 ""
   "chapters/chXX1.tex" 1713346697 186 9038a3c4139457c11a3640188113d7c7 ""
-  "header.sty" 1714347462 7663 fffdeed135c028d841220871f35e3a3d ""
-  "main.aux" 1714382486 1906 bcd8ff6e393a7666036c0cc8454a04c5 "pdflatex"
-  "main.out" 1714382486 1611 c3b02d81ee877891856a06ecd5c24dd2 "pdflatex"
-  "main.tex" 1714382482 914 e476ba6020a2ed45e0d5fc9b56b153b4 ""
-  "main.toc" 1714382486 870 14c9e9f150c24bc612697b9a01986eda "pdflatex"
+  "figs/fermi_dirac_graph.tex" 1714438121 899 05425fdefc98ab5323d64cf0819c413d ""
+  "header.sty" 1714442623 7712 cd53b7dd3859d0b06aeb4072a6049d2a ""
+  "main.aux" 1714447514 1906 19d672ff52b898e6fa73254cc98e246c "pdflatex"
+  "main.out" 1714447514 1611 c3b02d81ee877891856a06ecd5c24dd2 "pdflatex"
+  "main.tex" 1714447511 804 46799fbd88747c95df1de4c4c8b890ee ""
+  "main.toc" 1714447514 870 205be27f33493d1fba798d485bfc4961 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

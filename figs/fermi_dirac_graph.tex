@@ -1,0 +1,26 @@
+% Source: https://tex.stackexchange.com/questions/251496/fermi-dirac-in-pgfplots-dimension-too-lage
+
+\def\xmax{2.3}\def\ymax{1.2}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel=$\frac{mv^2}{2k_BT}$ (eV),
+            ylabel=$f(n)$,
+            legend entries={0 K,100 K,1000 K,10000 K},
+            x tick style={color=black},
+            y tick style={color=black},
+            xtick pos=left,
+            ytick pos=left,
+            xmin=-3,
+            xmax=3,
+            ymin=-0.1,
+            ymax=1.1
+            ]
+        \addplot[samples=50,black] {(1/((exp((x)/(80.617e-5))+1))};
+        \addplot[samples=50,blue,dashed] {(1/((exp((x)/(8.617e-3))+1))};
+        \addplot[samples=50,red,dashed] {(1/((exp((x)/(8.617e-2))+1))};
+        \addplot[samples=50,green,dashed] {(1/((exp((x)/(8.617e-1))+1))};
+        \end{axis}
+        \end{tikzpicture}
+\end{center}
