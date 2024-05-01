@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.6)  29 APR 2024 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.6)  30 APR 2024 21:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1079,7 +1079,46 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip134
 \backup@length=\skip135
 \ar@cellbox=\box139
-)))
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen376
+\WF@size=\dimen377
+\c@WF@wrappedlines=\count384
+\WF@box=\box140
+\WF@everypar=\toks57
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/mwe/mwe.sty
+Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count385
+\l__lipsum_a_int=\count386
+\l__lipsum_b_int=\count387
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count388
+\c@Blindtext=\count389
+\c@blind@countparstart=\count390
+\blind@countxx=\count391
+\blindtext@numBlindtext=\count392
+\blind@countyy=\count393
+\c@blindlist=\count394
+\c@blindlistlevel=\count395
+\c@blindlist@level=\count396
+\blind@listitem=\count397
+\c@blind@listcount=\count398
+\c@blind@levelcount=\count399
+\blind@mathformula=\count400
+\blind@Mathformula=\count401
+\c@blind@randomcount=\count402
+\c@blind@randommax=\count403
+\c@blind@pangramcount=\count404
+\c@blind@pangrammax=\count405
+))
 
 Package siunitx Warning: Option "quotient-mode" has been removed in this
 (siunitx)                release.
@@ -1104,31 +1143,31 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 Package: tcolorbox 2023/02/12 version 6.0.1 text color boxes
  (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks57
-\verbatim@line=\toks58
+\every@verbatim=\toks58
+\verbatim@line=\toks59
 \verbatim@in@stream=\read4
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (/usr/local/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box140
-\tcb@upperbox=\box141
-\tcb@lowerbox=\box142
-\tcb@phantombox=\box143
-\c@tcbbreakpart=\count384
-\c@tcblayer=\count385
-\c@tcolorbox@number=\count386
-\tcb@temp=\box144
+\tcb@titlebox=\box141
+\tcb@upperbox=\box142
+\tcb@lowerbox=\box143
+\tcb@phantombox=\box144
+\c@tcbbreakpart=\count406
+\c@tcblayer=\count407
+\c@tcolorbox@number=\count408
 \tcb@temp=\box145
 \tcb@temp=\box146
 \tcb@temp=\box147
+\tcb@temp=\box148
  (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.0.1'
-\c@tcbrastercolumn=\count387
-\c@tcbrasterrow=\count388
-\c@tcbrasternum=\count389
-\c@tcbraster=\count390
+\c@tcbrastercolumn=\count409
+\c@tcbrasterrow=\count410
+\c@tcbrasternum=\count411
+\c@tcbraster=\count412
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.0.1'
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
@@ -1137,7 +1176,7 @@ Package: tikzfill.image 2022/07/20 v1.0.0 Image filling library for TikZ
 Package: tikzfill-common 2022/07/20 v1.0.0 Auxiliary code for tikzfill
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2022/07/20 v1.0.0 Image filling library
-\l__tikzfill_img_box=\box148
+\l__tikzfill_img_box=\box149
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.0.1'
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -1146,19 +1185,19 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.0.1'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box149
-\tcb@totalupperbox=\box150
-\tcb@totallowerbox=\box151
+\tcb@testbox=\box150
+\tcb@totalupperbox=\box151
+\tcb@totallowerbox=\box152
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.0.1'
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.0.1'
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.0.1'
-\tcbfitdim=\dimen376
-\tcb@lowerfitdim=\dimen377
-\tcb@upperfitdim=\dimen378
-\tcb@cur@hbadness=\count391
+\tcbfitdim=\dimen378
+\tcb@lowerfitdim=\dimen379
+\tcb@upperfitdim=\dimen380
+\tcb@cur@hbadness=\count413
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.0.1'
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
@@ -1171,7 +1210,7 @@ Library (tcolorbox): 'tcbprocessing.code.tex' version '6.0.1'
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
-\c@tcblisting=\count392
+\c@tcblisting=\count414
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
  (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty
@@ -1213,17 +1252,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count393
-\scratchdimen=\dimen379
-\scratchbox=\box152
-\nofMPsegments=\count394
-\nofMParguments=\count395
-\everyMPshowfont=\toks59
-\MPscratchCnt=\count396
-\MPscratchDim=\dimen380
-\MPnumerator=\count397
-\makeMPintoPDFobject=\count398
-\everyMPtoPDFconversion=\toks60
+\scratchcounter=\count415
+\scratchdimen=\dimen381
+\scratchbox=\box153
+\nofMPsegments=\count416
+\nofMParguments=\count417
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count418
+\MPscratchDim=\dimen382
+\MPnumerator=\count419
+\makeMPintoPDFobject=\count420
+\everyMPtoPDFconversion=\toks61
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1237,8 +1276,9 @@ Package hyperref Info: Link coloring OFF on input line 10.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-\c@lstlisting=\count399
+\c@lstlisting=\count421
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
@@ -1258,38 +1298,36 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 10.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks61
-\inpenc@posthook=\toks62
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 12.
+\inpenc@prehook=\toks62
+\inpenc@posthook=\toks63
+) (./main.toc
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
-
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./main.toc)
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [2
+ [1
 
-] (./chapters/ch01.tex
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./chapters/ch01.tex
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 16.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [3] (./figs/fermi_dirac_graph.tex
+) [2] (./figs/ch01/fermi_dirac_graph.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -1310,26 +1348,64 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-) [4]
+) [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5] [6]) [7] (./chapters/ch02.tex) [8] (./chapters/chXX1.tex) [9] (./main.aux)
+ [4] [5]) [6] (./chapters/ch02.tex
+<figs/ch02/diffusion_current.png, id=192, 387.4475pt x 412.54124pt>
+File: figs/ch02/diffusion_current.png Graphic file (type png)
+<use figs/ch02/diffusion_current.png>
+Package pdftex.def Info: figs/ch02/diffusion_current.png  used on input line 35.
+(pdftex.def)             Requested size: 193.72327pt x 206.27011pt.
+
+Underfull \vbox (badness 2134) has occurred while \output is active []
+
+ [7]) [8 <./figs/ch02/diffusion_current.png>] (./chapters/ch03.tex
+<figs/ch03/pn_junction.png, id=209, 382.42876pt x 162.6075pt>
+File: figs/ch03/pn_junction.png Graphic file (type png)
+<use figs/ch03/pn_junction.png>
+Package pdftex.def Info: figs/ch03/pn_junction.png  used on input line 9.
+(pdftex.def)             Requested size: 191.2139pt x 81.30354pt.
+<figs/ch03/uncovered_region.png, id=210, 473.77pt x 465.74pt>
+File: figs/ch03/uncovered_region.png Graphic file (type png)
+<use figs/ch03/uncovered_region.png>
+Package pdftex.def Info: figs/ch03/uncovered_region.png  used on input line 20.
+(pdftex.def)             Requested size: 236.88441pt x 232.86943pt.
+ [9 <./figs/ch03/pn_junction.png> <./figs/ch03/uncovered_region.png>]
+<figs/ch03/3_graph.png, id=221, 584.1825pt x 812.03375pt>
+File: figs/ch03/3_graph.png Graphic file (type png)
+<use figs/ch03/3_graph.png>
+Package pdftex.def Info: figs/ch03/3_graph.png  used on input line 54.
+(pdftex.def)             Requested size: 350.51219pt x 487.22401pt.
+
+Underfull \vbox (badness 1910) has occurred while \output is active []
+
+ [10]
+<figs/ch03/concentration_reader.png, id=229, 631.35875pt x 315.1775pt>
+File: figs/ch03/concentration_reader.png Graphic file (type png)
+<use figs/ch03/concentration_reader.png>
+Package pdftex.def Info: figs/ch03/concentration_reader.png  used on input line 65.
+(pdftex.def)             Requested size: 315.6786pt x 157.58836pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./figs/ch03/3_graph.png>]) [12 <./figs/ch03/concentration_reader.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C3B02D81EE877891856A06ECD5C24DD2;1611.
+(rerunfilecheck)             Checksum: 31466677CAB52C5627606C50A6B78075;2877.
  ) 
 Here is how much of TeX's memory you used:
- 69637 strings out of 476025
- 1766541 string characters out of 5790018
- 2454724 words of memory out of 5000000
- 89027 multiletter control sequences out of 15000+600000
- 551138 words of font info for 97 fonts, out of 8000000 for 9000
+ 70416 strings out of 476025
+ 1784185 string characters out of 5790018
+ 2556539 words of memory out of 5000000
+ 89759 multiletter control sequences out of 15000+600000
+ 544729 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,17n,145p,1229b,2288s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (9 pages, 167585 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (12 pages, 528617 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 
