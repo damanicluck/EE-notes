@@ -1,2 +1,8 @@
 # ignore all the following files with .__ attached
 *.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
