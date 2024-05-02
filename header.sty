@@ -22,48 +22,84 @@
 \date{}
 \AtBeginDocument{\RenewCommandCopy\qty\SI}
 
-
-\usepackage[american,siunitx]{circuitikz}
+% dont change this order idk why but it breaks if in abc order like the one in comments
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{etoolbox}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{comment}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc} % to get proper curly braces with \tt
 \usepackage{adjustbox}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{bbm}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usetikzlibrary{calc}
 \usepackage{cancel}
 \usepackage{changepage}
+\usepackage[american,siunitx]{circuitikz}
 \usepackage{color,hyperref,listings,enumitem}
-\usepackage{comment}
-\usepackage{enumerate}
-\usepackage{epsf}
-\usepackage{etoolbox}
-\usepackage[T1]{fontenc} % to get proper curly braces with \tt
-\usepackage{graphicx}
-\usepackage{graphicx}
-\usepackage{latexsym}
-\usepackage{latexsym}
+\usepackage{bbm}
+\usepackage{tkz-euclide}
+\usepackage{physics}
+\usepackage{pgfplots}
 \usepackage{mathdots}
 \usepackage{mathrsfs}
-\usepackage{mathtools}
-\usepackage[framemethod=TikZ]{mdframed}
-\usepackage{multicol}
 \usepackage{mwe}
-\usepackage{pgfplots}
-\usepackage{physics}
+\usepackage[framemethod=TikZ]{mdframed}
 \usepackage{subcaption}
-\usepackage{textcomp}
-\usepackage{textcomp}
-\usepackage{tikz}
-\usepackage{times}
-\usepackage{tkz-euclide}
-\usepackage{url}
 \usepackage{wrapfig}
 
-
-\usetikzlibrary{calc}
-
+% \usepackage[american,siunitx]{circuitikz}
+% \usepackage[framemethod=TikZ]{mdframed}
+% \usepackage[T1]{fontenc} % to get proper curly braces with \tt
+% \usepackage{adjustbox}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+% \usepackage{amsfonts}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{amsthm}
+% \usepackage{bbm}
+% \usepackage{cancel}
+% \usepackage{changepage}
+% \usepackage{color,hyperref,listings,enumitem}
+% \usepackage{comment}
+% \usepackage{enumerate}
+% \usepackage{epsf}
+% \usepackage{etoolbox}
+% \usepackage{graphicx}
+% \usepackage{graphicx}
+% \usepackage{latexsym}
+% \usepackage{latexsym}
+% \usepackage{mathdots}
+% \usepackage{mathrsfs}
+% \usepackage{mathtools}
+% \usepackage{multicol}
+% \usepackage{mwe}
+% \usepackage{pgfplots}
+% \usepackage{physics}
+% \usepackage{subcaption}
+% \usepackage{textcomp}
+% \usepackage{textcomp}
+% \usepackage{tikz}
+% \usepackage{times}
+% \usepackage{tkz-euclide}
+% \usepackage{url}
+% \usepackage{wrapfig}
+% \usetikzlibrary{calc}
 
 \sisetup{per-mode=fraction}
 \sisetup{quotient-mode=fraction}
