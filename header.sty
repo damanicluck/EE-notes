@@ -1,13 +1,7 @@
-
 %===============================================================
 % Packages Used
 %===============================================================
 %%%%%% Copied from ee16.sty
-\AtBeginDocument{\RenewCommandCopy\qty\SI}
-\usepackage{amsmath,textcomp,enumerate,mathtools,etoolbox}
-\usepackage{pgfplots}
-\usepackage{times,latexsym,comment,latexsym,epsf,amssymb,graphicx,url,amsmath,amsfonts,textcomp}
-\usepackage[T1]{fontenc} % to get proper curly braces with \tt
 \textheight=9in
 \textwidth=6.5in
 \addtolength{\voffset}{-1in}
@@ -26,29 +20,50 @@
 \font\dunhb=cmdunh10 scaled \magstep2
 \font\dunha=cmdunh10 scaled \magstep2
 \date{}
-\usepackage{amsthm}
-\usepackage{changepage}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{color,hyperref,listings,enumitem}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+
+\usepackage[american,siunitx]{circuitikz}
+\usepackage{adjustbox}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{bbm}
-\usepackage{tkz-euclide}
-\usepackage{physics}
-\usepackage{pgfplots}
-\usepackage{adjustbox}
 \usepackage{cancel}
-\usepackage{commath}
+\usepackage{changepage}
+\usepackage{color,hyperref,listings,enumitem}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{epsf}
+\usepackage{etoolbox}
+\usepackage[T1]{fontenc} % to get proper curly braces with \tt
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{latexsym}
 \usepackage{mathdots}
 \usepackage{mathrsfs}
+\usepackage{mathtools}
 \usepackage[framemethod=TikZ]{mdframed}
-\usepackage{subcaption}
-\usepackage[american,siunitx]{circuitikz}
-\usepackage{wrapfig}
+\usepackage{multicol}
 \usepackage{mwe}
+\usepackage{pgfplots}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{times}
+\usepackage{tkz-euclide}
+\usepackage{url}
+\usepackage{wrapfig}
+
+
+\usetikzlibrary{calc}
+
 
 \sisetup{per-mode=fraction}
 \sisetup{quotient-mode=fraction}
@@ -104,12 +119,10 @@
 \def\Geom{\text{Geom}}
 \def\Poiss{\text{Poiss}}
 \def\Exp{\text{Exp}}
-%===============================================================
-% Data
-%===============================================================
-%2. 
-\newcommand{\semester}[1]{\newcommand{\sem}{#1}}
-\def\semester{Fall 2023}
+
+% all the other definitions are copied from ee16.sty and these are mine
+\def\conc{cm$^{-3}$}
+\def\mobility{cm$^2$/V $\cdot$ s}
 
 % Following environments are for emphasis within the document 
 \newenvironment{define}
@@ -164,9 +177,7 @@
   \rotatebox[origin=c]{30}{\rule{10pt}{.9pt}}\kern-1pt%
   \rotatebox[origin=c]{-30}{\rule{10pt}{1.3pt}}}{%
   \rule{.9pt}{10pt}}{O}{c}{F}{F}{S}}{\Delta}}
-
-
-
+  
 % used for listing things
 \newenvironment{pline}{\begin{itemize}}{\end{itemize}}
 % used for equations
@@ -175,12 +186,6 @@
 \newenvironment{Ans}{\newline \color{blue}}{} 
 
 % FROM BRANDON: https://github.com/Bransthre/eecs127-notes/blob/main/ln.sty changed colors but i want to be able to 
-% \definecolor{silver}{rgb}{0.75, 0.75, 0.75}
-% \definecolor{ice}{rgb}{0.44, 0.65, 0.82}
-% \definecolor{mayablue}{rgb}{0.45, 0.76, 0.98}
-% \definecolor{lavenderblue}{rgb}{0.8, 0.8, 1.0}
-% \usepackage[many]{tcolorbox}
-% \tcbuselibrary{skins, breakable, theorems}
 \tcolorboxenvironment{pline}
   {blanker, before skip = 6pt, after skip = 6pt,
     borderline west = {1mm}{0pt}{blue!45!black!15!red!45!}}
@@ -190,39 +195,3 @@
 \tcolorboxenvironment{todo}
   {blanker, before skip = 6pt, after skip = 6pt,
     borderline west = {1mm}{0pt}{red!100!}}
-% \newtcbtheorem[number within=section]{ln-theorem}{Theorem}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = cyan,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-define}{Definition}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = ice!85!black!70!,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-symbol}{Symbol}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = mayablue!70!black!95!,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-fig}{Figure}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = lavenderblue!70!black!95!,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-explain}{Explain}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = violet,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-todo}{Todo}%
-%   {enhanced, breakable,
-%     colback = white, colframe = silver!40!black!60!, colbacktitle = violet!70!black!90!,
-%     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
-%     boxed title style = {sharp corners}, separator sign = {.}}{}
-% \newtcbtheorem[number within=section]{ln-quest}{Example Question}%
-% {enhanced, breakable, colback=ice!5,colframe=ice!35!black!55!}{}
-% \newtcbtheorem[number within=section]{ln-think}{Exercise Reader! Exercise!}%
-% {enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
-% \newtcbtheorem[number within=section]{ln-practice}{Practice}%
-% {enhanced, breakable, colback=lavenderblue!5,colframe=lavenderblue!35!black!55!}{}
