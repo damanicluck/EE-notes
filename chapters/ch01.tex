@@ -1,6 +1,6 @@
-\section{Charge Carriers and Doping}
+\chapter{Charge Carriers and Doping}
 
-\subsection{Introduction}
+\section{Introduction}
 We start learning about resistors, capacitors, and inductors from earlier courses such as EECS 16A and 16B. With more components like transistors, diodes, and op-amps (which are all based on semiconductors), we are able to expand upon circuit design. We need to understand semiconductor physics in order to understand how these components operate.
 \begin{center}
     \begin{tikzpicture}
@@ -36,7 +36,7 @@ For collisions in gas, we focus on the idea that initial velocity and direction 
 
 Different elements have a different number of outer shell electrons. For semiconductors like silicon, we can increase the temperature to increase its conductivity. Silicon atoms are arranged in a diamond structure and in general, the energy levels that an atom can occupy are discrete. The \textbf{valence band} electrons are at a lower energy state (bound to host atoms) while \textbf{conduction band} electrons are at a higher energy state and are "free" electrons. These electrons are free to move around the crystal and take part in conduction. 
 
-\subsection{Conduction and Fermi Dirac Distribution}
+\section{Conduction and Fermi Dirac Distribution}
 Thermal energy is on average about $\sim 26~eV$ at room temperature How large the \textbf{band-gap}, the gap between the conduction and valence band, determines how conductive a material is:
 \begin{itemize}
     \item Insulators: band gap $\sim$ 15 $eV$
@@ -62,8 +62,10 @@ Because electrons are a type of particle called a \textbf{fermion}, we can say t
 \end{gline}
 
 The graph below is a plot of the Fermi-Dirac Distribution at different temperatures. We can use this plot to find the probability of the concentration of electrons ad holes at certain temperatures.
+
 \input{figs/ch01/fermi_dirac_graph.tex}
-Ok so why is this graph significant. To repeat, we can relate the concentration of holes or electrons to the 
+
+Ok so why is this graph significant. To repeat, we can relate the concentration of holes or electrons to the temperature of its surroundings. We see that for the plot for a high temperature, there is a greater probability of charge carriers having enough energy to cross into the conduction band.
 
 \textbf{Thermal generation} occurs when sufficient thermal energy exist to break some covalent bonds, which results in a \textbf{free electron}. This free electron is now free to conduct electric current if an electric field is applied to the crystal. However, this leaves behind a net positive charge. \textbf{Holes} are positively charged carrers, which can also move around the crystal and are available to conduct electric current. As temperature increases, so do electron-hole pairs and the conductivity of the crystal. 
 
@@ -86,7 +88,7 @@ We can also write $n_i$ as a function of temperature
     \item $k$, Boltzmann's constant
 \end{gline}
 
-\subsection{Doping}
+\section{Doping}
 In a non-doped crystal like in the above texts, there will be equal concentrations of free electrons and holes from thermal generation. \textbf{Doping} is defined as introducing impurities inside a silicon crystal to adjust the carrier concentration. The following materials are commonly used:
 \begin{pline}
     \item Group III elements: boron, aluminum, gallium $\rightarrow$ acceptors; increase holes
@@ -115,9 +117,20 @@ $n_n$ is determined by doping concentration, and independent of temperature,  wh
     \end{align*}
 
 An analysis with boron, an acceptor, will yield similar conclusions with a change in variables.
+
+If the concentration of donors/acceptors is greater than the other by a factor of at least 100, then we can say that $n/p = N_D / N_A$, respectively.
 \end{Analysis}
 
-\subsection{Practice Problems}
+\section{Compensated Semiconductor Material}
+We can dope a semiconductor with both acceptors and donors. A \textbf{compensated semiconductor material} has both acceptors and donors.
+
+\textbf{N-type material}: $N_D > N_A$
+\[n \approx N_D - N_A, ~~~~ p \approx \frac{n_i^2}{N_D - N_A}\]
+
+\textbf{P-type material}: $N_D < N_A$
+\[p \approx N_A - N_D, ~~~~ n \approx \frac{n_i^2}{N_A - N_D}\]
+
+\section{Practice Problems}
     \begin{enumerate}
         \item Calculate the intrinsic carrier density $n_i$ for silicon at $T = 50$ K and $350$ K.
         \begin{Ans}
@@ -130,20 +143,53 @@ An analysis with boron, an acceptor, will yield similar conclusions with a chang
             \end{align*}
         \end{Ans}
 
-        \item Consider an $n$-type silicon for which the dopant concentration $N_D = 10^{17}/\text{cm}^3$. Find the electron and hole concentrations at 350 K. Refer to previous example for the value of $n_i$ at $T = 350$ K.
+        \item Consider an $n$-type silicon for which the dopant concentration $N_D = 10^{17}$ \conc. Find the electron and hole concentrations at 350 K. Refer to previous example for the value of $n_i$ at $T = 350$ K.
         \begin{Ans}
             Since this is an $n$-type silicon, 
                 \[n_n \simeq N_D = 10^{17} /\text{cm}^3\]
             From this we can find the concentration of minority holes as 
                 \[p_n \simeq \frac{n_i^2}{N_D} = \frac{(4.15 \times 10^{11})^2}{10^17} = 1.72 \times 10^6 / \text{cm}^3\]
         \end{Ans}
+
+        \item Here is a 1 $\mu$m long Si bar doped with $6 \times 10^{15}$ \conc of As and $6 \times 10^{15}$ \conc at 300 K. Assume $n_i =$ \conc. Answer the following questions (show the unit). Assume complete ionization. Use the given figure to find the mobility.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.8]{figs/ch01/ans3.png}
+        \end{figure}
+        \begin{enumerate}
+            \item Find the concentration of $n$ and $p$.
+            \begin{Ans}
+                Arsenic is a donor, meaning that it has 5 valence electrons in its outermost shell.
+                $n \approx 6 \times 10^{15} - 4 \times 10^{15} = 2  \times 10^{15}$
+
+                $p = \frac{n_i^2}{n} = 5 \times 10^4 \text{cm}^{-3}$
+            \end{Ans}
+            
+            \item Calculate its resistivity.
+            \begin{Ans}
+                    \[\rho = \frac{1}{q(\mu_n n + \mu_p p)}\]
+                Looking at the graph we see that at $N_A + N_D = 10^{16}$. $\mu_n \approx 1200$ \mobility and $\mu_p \approx$ \mobility. We can also simplify our equation above as 
+                    \[\rho \approx \frac{1}{q \mu_n n} = 2.6 ~ \Omega ~\text{cm}\]
+            \end{Ans}
+
+            \item Find the current density when 1 V is applied across the 1 $\mu$m length direction.
+            \begin{Ans}
+                \[J = \sigma E = \frac{E}{\rho} = \frac{1}{2.6 \times 10{-4} cm} \approx 3840 \text{ A/cm}^2\]
+            \end{Ans}
+
+            \item If we keep increasing the voltage, will the current keep increasing?
+            \begin{Ans}
+                No, due to velocity saturation.
+            \end{Ans}
+        \end{enumerate}
     \end{enumerate}
-\subsection{Sources}
+\section{Sources}
 \begin{itemize}
     \item \href{https://www.youtube.com/watch?v=yQDfVJzEymI}{\textcolor{blue}{Razavi Electronics 1, Lec 1, Intro., Charge Carriers, Doping}}
     \item \href{https://file.notion.so/f/f/048d6522-202b-48d4-b5d9-bc005bd602e2/214bf1f0-292f-48d6-9016-737d9f5da155/ee105_reader_v3.pdf?id=237a4300-3dbe-47d1-888b-ffae90d8352b&table=block&spaceId=048d6522-202b-48d4-b5d9-bc005bd602e2&expirationTimestamp=1714435200000&signature=yx-H1qvZJIodPfazOpwXX0Ce2mWMG8skOHl45xoPxus&downloadName=ee105_reader_v3.pdf}{EE105 Reader}
     \item Sedra, Adel S., et al. Microelectronic Circuits. Oxford University Press, 2021
     \item \href{https://eng.libretexts.org/Bookshelves/Materials_Science/TLP_Library_II/22%3A_Introduction_to_Semiconductors/22.2%3A_The_FermiDirac_Distribution}{Engineering LibreTexts: The Fermi-Dirac Distribution}
     \item \href{https://tex.stackexchange.com/questions/251496/fermi-dirac-in-pgfplots-dimension-too-lage}{Fermi-dirac distribution graph}
+    \item Q3 appeared as Q1 as EE105 HW6
 \end{itemize}
 

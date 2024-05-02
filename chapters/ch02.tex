@@ -1,7 +1,7 @@
-\section{Drift and Diffusion Current}
+\chapter{Drift and Diffusion Current}
 Total current flow is made up of drift current and diffusion current. If we apply an electric field $E$ to a semiconductor crystal, then holes accelerate in the direction of $E$ and free electrons accelerate in the opposite direction of $E$. While \textbf{drift current} is movement caused by electric fields, \textbf{diffusion current} is movement caused by variation in the carrier concentration. 
 
-\subsection{Drift Current}
+\section{Drift Current}
     \[v_{p-drift} = \mu_p E, ~~~~~ v_{n-drift} = - \mu_n E\]
 
 \begin{gline}
@@ -18,8 +18,8 @@ Total drift current density is
     \[J = J_p + J_n = q(p\mu_p + n\mu_n) E = \sigma E\]
 Via pattern matching, we can see that conductivity $\sigma$ is given by $\sigma = q(p\mu_p + n\mu_n)$ and resistivity is the inverse of this.
 
-\subsection{Diffusion Current}
-\textbf{Diffusion current} is the diffusion of charge carriers that give rose to a net flow of charge. We can write the current density as a function of the \textbf{concentration gradient} (slope of the concentration profile) at any point such that:
+\section{Diffusion Current}
+\textbf{Diffusion current} is the diffusion of charge carriers that give rose to a net flow of charge fro a region of high concentration to a region of low concentration. This implies that we can have current without voltage. We can write the current density as a function of the \textbf{concentration gradient} (slope of the concentration profile) at any point such that:
     \[J_p = -q D_p \frac{dp(x)}{dx}, ~~~~~ J_n = q D_n \frac{dn(X)}{dx}\]
 \begin{gline}
     \item $J_p, J_n$: hole/electron-current density, A/cm$^2$
@@ -27,7 +27,7 @@ Via pattern matching, we can see that conductivity $\sigma$ is given by $\sigma 
     \item $D_p, D_n$: diffusion constant or diffusivity of holes/electrons. For intrinsic silicon, $D_p = 12$ cm$^2$/s and $D_n = 35$ cm$^2$/s
     \item $p(x), n(x)$: hole/electron concentration at point $x$. Note that if $\frac{dp(x)}{dx} < 0$, $J_p$ ends up being positive.
 \end{gline}
-
+This equation shows that current density is proportional to the slope of the concentration.
 The image below shows a bar of silicon and an injection of holes on the left side, which will result in hole diffusion current in the same direct (positive direction of $x$)
 
 \begin{figure}[H]
@@ -46,9 +46,9 @@ Suppose we fill a gas chamber that is divided into two sections with a gases of 
     We see that the diffusion constant is related to the mobility.
 \end{Analysis}
 Total current will be given by the sum of drift and diffusion currents. In resistors, since the carrier is approximately uniform, diffusion current is nearly zero.
-    \[J = J_{drift} + J_{diff} = q\mu_n n E + qD_n \frac{dn}{dx}\]
+    \[J^n = J_{drift}^n + J_{diff}^n = q\mu_n n E + qD_n \frac{dn}{dx}\]
 
-\subsection{Practice Problems}
+\section{Practice Problems}
 \begin{enumerate}
     \item A uniform bar of $n$-type silicon of 2-$\mu$m length has a voltage of 1 V applied across it. If $N_D = 10^{16}/\text{cm}^3$ and $\mu_n = 1350$ cm$^2$/V $\cdot$ s, find (a) the electron drift velocity, (b) the time it takes an electron to cross the 2-$\mu$m length, (c) the drift-current density, and the (d) drift current in the case that the silicon bar has a cross-sectional area of 0.25 $\mu$m$^2$.
     \begin{Ans}
@@ -60,7 +60,7 @@ Total current will be given by the sum of drift and diffusion currents. In resis
     \item 
 \end{enumerate}
 
-\subsection{Sources}
+\section{Sources}
 \begin{itemize}
     % \item \href{https://www.youtube.com/watch?v=NWolpDgi6_Y}{\textcolor{blue}{Razavi Electronics 1, Lec 2. Doping, Drift}}
     \item Sedra, Adel S., et al. Microelectronic Circuits. Oxford University Press, 2021
