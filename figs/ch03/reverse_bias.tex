@@ -1,0 +1,10 @@
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}
+        \draw (0,0) to [battery2, l=$V_D < 0$ , invert] (0,2)
+        to [short] (2,2)
+        to [full diode, v^=$-\phi_{bi}+V_D$,] (2,0)
+        to (0,0);
+    \end{circuitikz}
+    \label{fig:reverse_bias}
+\end{figure}
