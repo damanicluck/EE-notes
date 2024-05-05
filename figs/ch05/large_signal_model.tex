@@ -1,0 +1,35 @@
+\begin{figure}[H]
+    \centering
+    % \begin{circuitikz}[american voltages]
+    %     \draw
+    %       (0,0) to [short, o-] (6,0)
+    %       to [V, l_=$\mathrm{j}{\omega}_m \underline{\psi}^s_R$] (6,2) 
+    %       to [R, l_=$R_R$] (6,4) 
+    %       to [short, i_=$\underline{i}^s_R$] (5,4) 
+    %       (0,0) to [open, v^>=$\underline{u}^s_s$] (0,4) 
+    %       to [short, *- ,i=$\underline{i}^s_s$] (1,4) 
+    %       to [R, l=$R_s$] (3,4)
+    %       to [L, l=$L_{\sigma}$] (5,4) 
+    %       to [short, i_=$\underline{i}^s_M$] (5,3) 
+    %       to [L, l_=$L_M$] (5,0); 
+    % \end{circuitikz}
+    \begin{circuitikz}[american voltages]
+        \draw 
+            (0,0) coordinate(a) to [short, o-o] ++(10,0) coordinate(b) 
+            to (a) 
+            to [open, -o] ++(0,2) coordinate(c)
+            to [short,-o, i=$i_G$] ++(1,0)
+            to [open, v=$v_{GS}$] ++(0,-2)
+            to (b)
+            to [open, v<=$v_{DS}$] ++(0,2) coordinate(d)
+            to [short, i=$i_D$] ++(-1,0)
+            to [short] ++(-6,0)
+            to [cI, -*, l=$\frac{1}{2} k'_n \frac{W}{L}(v_{GS} - V_{tn})^2$] ++(0,-2)
+            to ++(-1,0)
+            to [short, *-o, l=S] ++(0,-0.5)
+            to [open, -*] ++(6,0.5)
+            to [R, -*, l_=$r_o$] ++(0,2)
+            ;
+    \end{circuitikz}
+    \caption{Large signal model operating in saturation drawn with outputresistance $r_o$}
+\end{figure}

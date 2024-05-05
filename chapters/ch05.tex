@@ -1,0 +1,120 @@
+\chapter{MOSFETs}
+A transistor comes from the two words \textbf{trans}conductance res\textbf{istor}. MOSFET stands for MOS field effect transistor since we are taking the MOS CAP and adding two extra diffusion regions. Most of the EE105 reader spents time on the NMOS device since most of the concepts can be carried over into analyzing the PMOS device too. A MOSFET is a three terminal device, so we are moving on form the junction diode, a basic two terminal device
+
+Part of the motivation for learning about MOSFETs is for building a current source and also for voltage amplification. If we are able to form a voltage controlled current source, we can build a voltage amplifier.
+
+\section{Structure}
+\begin{gline}
+    \item $n^+$: heavily doped $n$-type silicon
+    \item $n^-$: lightly doped $n$-type silicon
+    \item $V_t$: threshold voltage
+    \item $V_T$: thermal voltage
+    \item $L$: channel length
+\end{gline}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale=0.4]{figs/ch05/nmos_structure.png}
+    \caption{Physical structure of the NMOS transistor and a cross section view}
+    \label{fig:nmos_structure}
+\end{figure}
+In figure \ref{fig:nmos_structure}, we see that the NMOS transistor has the gate, source, drain, and substrate/body terminal, as indicated by the first letters of each terminal. From its physical structure, we notice that a MOSFET is a symmetrical device and that the substrate forms a PN junction with the source and drain regions.
+
+At zero gate voltage, we see that there are two back to back diodes in series between drain and source. One from the PN junction formed between the $n^+$ drain region and the $p$ type substrate and the other from the $n^+$ source region and the $p$ type substrate. These diodes prevent current conduction from drain to source when a voltage $v_{ds}$ is applied.
+
+\section{NMOS: Current conduction}
+Suppose you ground the source and drain and $v_g > 0$. A positive gate voltage causes free holes to be repelled to the region of the substrate under the gate into the substrate. This leaves a \textbf{carrier-depletion region}. A positive gate voltage also attracts electrons from the $n^+$ source and drain regions to the channel region. Show in figure \ref{fig:nmos_conduct}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{figs/ch05/nmos_conduct}
+    \caption{Positive voltage applied to the gate. An $n$ channel is induced at the top of the substrate beneath the gate}
+    \label{fig:nmos_conduct}
+\end{figure}
+We see that a \textbf{channel} is formed for current flow from the drain to source. \textbf{Threshold voltage} is also defined as the value of \vgs where a sufficient number of mobile electrons accumulate in the channel region to form a conducting channel. \textbf{Overdrive voltage}, or \textbf{effective voltage} is the excess of \vgs over $V_t$. 
+    \[v_{gs} - V_t \equiv v_{ov}\]
+As \vov increases, so does the magnitude of the channel charge. If drawn out, this looks like the an increase in the depth/deepness of the channel.
+
+Another thing to keep in mind here is the \textbf{oxide capacitance}.
+    \[C_{ox} = \frac{\epsilon_{ox}}{t_{ox}}\]
+\begin{gline}
+    \item $C_{ox}$: capacitance of the parallel-plate capacitor per unit gate area, F/m\sq
+    \item $\epsilon_{ox}$: permittivity of silicon dioxide; $\epsilon_{ox} = 3.9 \epsilon_0 = 3.45 \times 10^{-11}$ F/m
+    \item $t_{ox}$: oxide thickness, determined by process technology
+\end{gline}
+
+\begin{Analysis}{Deriving $i_D$ for small \vds}{}
+    We start by applying a small \vds and \vgs greater than its threshold voltage. $i_D$ is the current that Since $i_D$ is the charge per unit channel length, 
+        \[\frac{\mid Q \mid}{\text{unit channel length}} = C_{ox} W v_{OV}\]
+    We also know that channel conductance is proportional to the overdrive voltage, or \vgs $-V_t$. This means that current in the channel, $i_D$, is proportional to(\vgs $-V_t$). \vds also establishes an electric field $E$ across the length of the channel given by:
+        \[\mid E \mid = \frac{v_{DS}}{L}\]
+    An electric field causes channel electrons to drift towards the drain with a velocity of:
+        \[\text{Electron drift velocity} = \mu_n \mid E \mid = \mu_n \frac{v_{DS}}{L}\] 
+    Remembering that current is the rate of charged particles, then we find current by multiplying charge per unit channel length by the electron drift velocity.
+        \[i_D = [(\mu_n C_{ox}) (\frac{W}{L}) v_{OV}] v_{DS} = [(\mu_n C_{ox}) (\frac{W}{L}) (v_{GS} - V_t)] v_{DS}\]
+    Conductance of the channel is given by:
+        \[g_{DS} = (\mu_n C_{ox}) (\frac{W}{L}) v_{OV} = (\mu_n C_{ox}) (\frac{W}{L}) (v_{GS} - V_t)\]
+    \textbf{Process transconductance parameter} is given by:
+        \[K_n' = \mu_n C_{ox}\]
+\end{Analysis}
+
+For a small \vds, the MOSFET behaves with a linear resistance $r_{DS}$ given by
+    \[r_{DS} = \frac{1}{g_{DS}} = \frac{1}{(\mu_n C_{ox})(W/L)v_{OV}}\]
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale=0.5]{figs/ch05/increase_vds.png}
+    \caption{Operation of the enhancement NMOS transistor as \vds is increased}
+    \label{fig:increase_vds}
+\end{figure}
+
+If we increase \vds, the depletion region will widen at the depletion region as a result of the increased \vds that makes the channel shallower near the drain. This is reflected in the formula for $i_D$. We'll see that the channel looks more like a tapered shape, where it's deepest at the source end (proportional to \vov) and shallowest at the drain end (proportional to \vov - \vds). Shown in figure \ref{fig:increase_vds}.
+\[i_D = \mu_n C_{ox} (\frac{W}{L}) (V_{OV} - \frac{1}{2}v_{DS})v_{DS}\]
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale=0.5]{figs/ch05/pinch_off.png}
+    \caption{Operation of the enhancement NMOS transistor in different regions}
+    \label{fig:pinch}
+\end{figure}
+
+Figure \ref{fig:pinch} shows the drain current for different regions. Increasing \vds beyond \vov has no affect on the channel shape and charge. This is when the transistor enters saturation and the channel region resembles a right triangle with the deepest part being close to the source.
+
+\section{PMOS: Structure and Current conduction}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale=0.5]{figs/ch05/pmos_structure.png}
+    \caption{Physical structure of the PMOS structure and side view}
+    \label{fig:pmos_structure}
+\end{figure}
+To conduct current here, we need to apply a negative voltage between the gate and the source. This is because the current here is carried by holes (current goes in the same direction as the holes, contrastingly from when current is carried by electrons) and flows from the source to the drain. If we had to compare the NMOS cross section with the PMOS cross section, then we would notice that the substrate type for a PMOS transistor is an $n$-type substrate with $p^+$-type wells for the source and drain, while this is switched for a NMOS transistor ($p$-type substrate with $n^+$-type wells for source and drain). We'll also notice that the direction of current is flowing from opposite wells.
+\begin{gline}
+    \item $k'_p = \mu_p C_{ox}$: process transconductance parameter for PMOS
+    \item $mu_p$: mobility of the holes in the induced 
+    \item $k_p = k'_p(W/L)$: transistor transconductance parameter
+\end{gline}
+
+Typically, NMOS transistors have greater gain and speed of operations than PMOS devices. Electron mobility $\mu_n$ is higher by factor of 2 to 4 than the hole mobility $\mu_p$. The following attached PDF was something found online but sums up everything pretty nicely in a funny style.
+
+\newpage %commenting this out for now so that its not so intensive to create test pdfs
+% \includepdf[scale=0.9, clip, trim=10mm 10mm 10mm 10mm, pages={1-10}]{chapters/Applying_drain_voltage_nmos.pdf}
+
+
+\section{Large and Small Signal Equivalent Models}
+Large signal equivalent model of an $n$-channel MOSFET operating in the saturation region
+\input{figs/ch05/large_signal_model.tex}
+
+Future chapters will talk about the BJT (bipolar junction transistor). 
+\begin{pline}
+    \item MOSFETs can be made smaller than BJTs
+    \item MOSFET manufacturing process is relatively simpler and requires comparatively little powers
+    \item MOSFETs generate less heat
+    \item BJT better for current amplification circuits
+    \item BJT low on-state voltage drop and low conduction loss
+    \item BJT preferred in high power applications due to higher power handling; MOSFET preferred for low power applications
+\end{pline}
+\input{practice/pp05.tex}
+
+\section{Sources}
+\begin{itemize}
+    \item copy patse the sources from earlier chapters
+\end{itemize}

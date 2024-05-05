@@ -1,1 +1,39 @@
 \section{Practice Problems}
+
+\begin{enumerate}
+    \item For a MOSCAP with a $p$-type substrate. Given $V_{FB} = -0.53$ V, $N_A = 10^{17}$\conc, oxide (SiO$_2$ $\epsilon_{ox} = 4\epsilon_0$) thickness of 3nm, and Silicon $\epsilon_{Si} = 12\epsilon_0$. At 300K and $n_i = 10^{10}$\conc. The right-hand side is the semiconductor.
+    \begin{enumerate}
+        \item What is the condition for inversion to happen? Do not just answer $V > V_T$.
+        \begin{Ans}
+            For inversion to happen, the gate-base voltage is greater than the threshold voltage of the MOSCAP $V_{GB} > V_T$. This happens because the depletion region stops growing as the gate voltage is increased due to surface potential increasing. Surface potential will increase until the electron density at the surface equals the background ion density. This then leads to the surface effectively becoming an $N$-type.
+        \end{Ans}
+
+        \item Qualitatively draw the charge, electric field, and potential at accumulation.
+        \item Qualitatively draw the charge, electric field, and potential at depletion.
+        \item Qualitatively draw the charge, electric field, and potential at inversion.
+        \item Calculate the surface potential at the threshold. Hint: {\large $n = \frac{n_i^2}{N_A} e^{\frac{q\phi_s}{kT}}$}
+        \begin{Ans}
+            We see here that surface potential is half of the body potential.
+            \begin{align*}
+                \phi_S &= 2\phi_B \\
+                &= 2(\frac{kT}{q}) \ln(\frac{N_A}{n_i}) \\
+                &= 2(0.026 \mathrm{V}) \ln(\frac{10^{17} \mathrm{cm}^{-3}}{10^{10} \mathrm{cm}^{-3}}) \\
+                &= 0.838 \mathrm{V}
+            \end{align*}
+        \end{Ans}
+
+        \item Calculate the depletion width and depletion charge density at the threshold. Hint: {\large $W_D = \sqrt{\frac{2 \epsilon_{Si} \phi_s}{q N_A}}$}
+        \begin{Ans}
+            \begin{align*}
+                W_D
+            \end{align*}
+        \end{Ans}
+
+        \item The threshold voltage can be computed by summing up the flat-band voltage, the voltage across the oxide, and the surface potential at the threshold. Please calculate the threshold voltage.
+    \end{enumerate}
+
+    \item For a MOSCAP with a $n$-type substrate, given $N_D = 10^{17}$\conc, oxide (SiO$_2$ $\epsilon_{ox} = 4\epsilon_0$) thickness of 3nm, and Silicon $\epsilon_{Si} = 12\epsilon_0$. The right hand side is the semiconductor.
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+\end{enumerate}
