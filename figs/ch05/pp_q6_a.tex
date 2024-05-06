@@ -1,0 +1,28 @@
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[american voltages]
+        \ctikzset{tripoles/mos style/arrows}
+        \coordinate (G) at (0,0);
+        \coordinate (S) at (0,-1.5);
+        \coordinate (V) at (7,1);
+        \coordinate (5k) at (5,1);
+        \coordinate (currS) at (1,1);
+        \draw 
+        (G) to [short, o-, l=$G$] ++(-1,0) node[ground]{}
+        (G) to [open, v^=$V_{GS}$] (S)
+        (S) 
+            to [short, o-, l_=$S$] ++(1,0) % for labeling purposes
+            to ++(3,0)
+            to [open] ++(0,-1.5) node[ground]{}
+            to [I, l=$i_{in}$] ++(0,1.5) 
+        (V)
+            to [short, *-, l_=$v_o$] ++(-1,0)
+            to (currS)
+            to [cI, -*, l=$g_m V_{GS}$] ++(0,-2.5)
+            to [R, l=10k$\Omega$] ++(0,-1.5) node[ground]{}
+        (V) to [R, l=2k$\Omega$] ++(0,-2) node[ground]{}
+        (5k) to [R, l=5k$\Omega$] ++(0,-2) node[ground]{}
+        ;
+    \end{circuitikz}
+    \caption{Circuit for this problem}
+\end{figure}

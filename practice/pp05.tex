@@ -189,115 +189,48 @@
         \item For the same circuit in part (b) but the body is connected to $v_o$, find $A_v$.
         \begin{Ans}
             \input{figs/ch05/pp_q5_c.tex}
+            The figures above show the body connected to $v_o$ and the equivalent small signal model. By superposition, we that 
+                \[v_o = -(g_m V_{GS} + g_{mb} V_{BS}) r_o || R_D\]
+            The following shows steps. We keep in mind there at $V_{BS} = v_o$ here $V_{GS} = v_s$ here.
+            \begin{align*}
+                A_v = \frac{v_o}{v_s} &= - \frac{(g_m V_{GS} + g_{mb} V_{BS})}{v_s} r_o || R_D \\
+                \frac{v_o}{v_s (r_o || R_D)} &= - \frac{(g_m v_s + g_{mb} v_o)}{v_s} = - g_m  - g_{mb} \frac{v_o}{v_s} \\
+                A_v (\frac{1}{r_o || R_D} + g_{mb}) &= -gm \\
+                A_v &= -\frac{g_m (r_o || R_D)}{1+ g_{mb} (r_o || R_D)}
+            \end{align*}
+        \end{Ans}
+    \end{enumerate}
+
+    \item The figure shows the equivalent circuit of an NMOS common-gate amplifier. The NMOS transistor has $g_m = 15$ mA/V and a large $r_o$ (can be modeled as open circuit). You can ignore body effect in this problem.
+
+    \input{figs/ch05/pp_q6.tex}
+    
+    \begin{enumerate}
+        \item Draw the small signal AC model of the circuit using source transformation to convert $v_i$ into a current source $i_{in}$.
+        \begin{Ans}
+            \input{figs/ch05/pp_q6_a.tex}
+        \end{Ans}
+
+        \item Find the gain $\frac{v_o}{i_{in}}$ as a numerical answer.
+        \begin{Ans}
+            At the $v_s$ node, we see that 
+                \[g_m V_{GS} = -g_m v_s\]
+            So, we get by KCL that 
+                \[i_{in} = g_m v_s + i_{10k} = g_m v_s + \frac{v_s}{10k}\]
+            At the node $v_o$ also by KCL and Ohm's Law:
+            \begin{align*}
+                g_m V_{GS} + \frac{v_o}{5k} + \frac{v_o}{2k} &= 0 \\
+                g_m v_s &= v_o (\frac{1}{5k} + \frac{1}{2k}) \\
+                v_o &= \frac{g_m v_s}{5k || 2k} = 1428.56 g_m v_s \\
+                \frac{v_o}{i_{in}} &= \frac{1428.56 g_m v_s}{v_s (g_m + \frac{1}{10k})} \\
+                \frac{v_o}{i_{in}} &= 1419 \mathrm{V/A}
+            \end{align*}
+            In the second to last line we are given what $g_m$ is so we can get a numerical answer here.
+        \end{Ans}
+
+        \item What is the input resistance $Z_{in}$ as a numerical answer. Consider the source resistor in this computation.
+        \begin{Ans}
+            Perform 
         \end{Ans}
     \end{enumerate}
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
