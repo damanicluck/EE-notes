@@ -1,0 +1,48 @@
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[scale=0.6, american voltages]
+        \ctikzset{bipoles/resistor/height=0.15}
+        \ctikzset{bipoles/resistor/width=0.4}
+        \ctikzset{bipoles/capacitor/height=0.35}
+        \ctikzset{bipoles/capacitor/width=0.1}
+        \coordinate (G) at (0,0);
+        \coordinate (D) at (14,0);
+        \coordinate (S) at (0,-3);
+        \coordinate (B) at (0,-6);
+        \coordinate (curr1) at (4,0);
+        \coordinate (curr2) at (7.75,0);
+        \coordinate (res) at (11,0);
+        \coordinate (Cdb) at (13,0);
+        \draw 
+        (G) 
+            to [short, o-*] ++(1,0) node[label=left:G] at (G){}
+            to [C, -*, l=$C_{gd}$] (curr1)
+            to [short, -*] (curr2) 
+            to [short, -*] (res)
+            to [short, -*] (Cdb)
+            to [short, -o] (D) node[label=right:D] {}
+            to [open, i=$i_{ds}$] ++(-3,0)
+        (G) 
+            to [open] ++(1,0)
+            to [C, -*, l=$C_{gs}$, v=$v_{gs}$] ++(0,-3)
+            to [C, -*, l=$C_{sb}$, v<=$v_{bs}$] ++(0,-3)
+        (S)
+            to [short, o-*] ++(1,0) node[label=left:S] at (S){}
+        (B)
+            to [short, o-*] ++(1,0) node[label=left:B] at (B){}
+            to ++(12,0)
+        (curr1)
+            to [cI, -*, l=$g_m v_{gs}$] ++(0,-3)
+        (curr2)
+            to [cI, -*, l=$g_{mb} v_{bs}$] ++(0,-3)
+        (res)
+            to [R, l=$r_o$] ++ (0,-3)
+            to (S)
+        (Cdb)
+            to [C, l=$C_{db}$] ++(0,-3)
+            to ++(0,-3)
+            to (B)
+        ;
+    \end{circuitikz}
+    \caption{A more complete NMOS model that is complete with capacitances.}
+\end{figure}
