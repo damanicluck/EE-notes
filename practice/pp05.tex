@@ -114,6 +114,83 @@
             Decreasing \vds may cause this since this may change the channel underneath.
         \end{Ans}
     \end{enumerate}
+
+    \item An $N$-channel MOSFET with the following parameters: $W = 10$\mun, $L = 1$\mun, $V_t  =0.5$V, $\mu_n = 400$ \mobility, \cox $=4\times10^{-7}$ F/cm\sq, $\lambda = 0.01 \mathrm{V}^{-1}$.
+    
+    \input{figs/ch05/pp_q4.tex}
+
+    \begin{enumerate}
+        % STATIONARY WRAPFIGURE FORCED TO FLOAT: means that text paragraphs are too short to full wrap around the supplied figures
+        \item Calculate \gm at \vgs = 1V and \vds = 1.2V.
+        \begin{Ans}
+            The formula is 
+            \begin{align*}
+                g_m &= \mu_n C_{ox} \frac{W}{L} (v_{GS} - V_t)(1 + \lambda V_{DS}) \\
+                &=(400 \frac{cm^2}{V \cdot s})(4 \times 10^{-7} \frac{F}{cm^2})(\frac{10 \mu \mathrm{m}}{1 \mu \mathrm{m}})(1 V - 0.5V)(1+0.01 V^{-1} (1.2 V)) \\
+                &= 8.096 \times 10^{-4} \Omega^{-1} \\
+                &= 8.096 \times 10^{-4} S
+            \end{align*}
+        \end{Ans}
+
+        \item Calculate $r_o$ at \vgs = 1V and \vds =1.2V.
+        \begin{Ans}
+            Formula for $r_o$ (output resistance) is 
+            \begin{align*}
+                r_o &= (\frac{\partial I_{DS}}{\partial v_{DS}})^{-1} \\
+                &= \frac{1}{\mu_n C_{ox} \frac{W}{2L} (v_{GS} - V_t)^2  \lambda} \\
+                &= \left( (\frac{400}{2} \frac{cm^2}{V \cdot s})(4 \times 10^{-7} \frac{F}{cm^2})(\frac{10 \mu \mathrm{m}}{1 \mu \mathrm{m}})(1 V - 0.5V) (0.01 V^{-1}) \right)^{-1} \\
+                &= 500 k\Omega
+            \end{align*}
+        \end{Ans}
+
+        \item Find the gain $\frac{v_o}{v_s}$ of this common source amplifier using this NMOS with \vgs = 1V, $R_D$ = 1 k$\Omega$ and \vdd = 1.4V. You can ignore the $\lambda$ when finding the DC bias point for simplicity. Don't need to consider capacitances and $g_{mb}$.
+        \begin{Ans}
+            Draw the small signal model.
+            \input{figs/ch05/pp_q4_c.tex}
+            We see that \vgs = $v_s$. Find $v_o$ by Ohm's Law and equivalent resistance.
+            \begin{align*}
+                v_o &= -g_m v_{GS} (r_o || R_D) \\
+                &= -g_m v_s (r_o || R_D) \\
+                \frac{v_o}{v_s} &= -g_m (r_o || R_D) \\
+                &= -8.096 \times 10^{-4} \Omega^{-1} (500 k\Omega || 1 k\Omega) \\
+                &= -0.808
+            \end{align*}
+        \end{Ans}
+    \end{enumerate}
+
+    \item For a PMOS common source amplifier:
+    \input{figs/ch05/pp_q5.tex}
+    \begin{enumerate}
+        \item If $v_{SG} - |V_{tp}| = V_0$, and $k = \mu_p C_{ox} \frac{W}{L}$, find the maximum $R_D$ symbolically to make PMOS operation in the saturation region. Assume $\lambda = 0$. 
+        \begin{Ans}
+            For a PMOS transistor, it will be in saturation if $V_{SD} \geq V_{SD} - V_{tp}$
+            \begin{align*}
+                I_{DS} &= \frac{\mu C_{ox}}{2} \frac{W}{L} (V_{GS} - V_t)^2 \\ 
+                &= \frac{k}{2} (V_{GS} - V_t)^2 \\
+                &= \frac{k}{2} V_0^2 \\
+                V_{SD} &= V_{DD} - R_D I_{DS} \geq V_0 \\
+                V_{DD} - V_0 &\geq R_D I_{DS} \\
+                V_{DD} - V_0 &\geq R_D \frac{k V_0^2}{2} \\
+                R_D &\leq \frac{2 (V_{DD} - V_0)}{kV_0^2}
+            \end{align*}
+        \end{Ans}
+
+        \item Draw its small-signal equivalent circuit and find out the $A_v = \frac{v_o}{v_s}$ symbolically ($R_D, g_m, r_o, g_{mb}$, and no capacitances). Please consider a finite PMOS output resistance ($r_o$) and assume it is in the saturation region. Body is grounded.
+        \begin{Ans}
+            \input{figs/ch05/pp_q4_c.tex}
+            Notice that the small signal model for a PMOS and NMOS transistor are the same here.
+            \begin{align*}
+                v_o &= -gm v_s (r_o || R_D) \\
+                A_v = \frac{v_o}{v_s} &= -g_m (r_o || R_D) \\
+                A_v = \frac{v_o}{v_s} &= -g_m \frac{r_o R_D}{r_o + R_D}
+            \end{align*}
+        \end{Ans}
+
+        \item For the same circuit in part (b) but the body is connected to $v_o$, find $A_v$.
+        \begin{Ans}
+            \input{figs/ch05/pp_q5_c.tex}
+        \end{Ans}
+    \end{enumerate}
 \end{enumerate}
 
 

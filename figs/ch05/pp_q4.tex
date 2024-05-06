@@ -1,0 +1,23 @@
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[american voltages]
+        \ctikzset{tripoles/mos style/arrows}
+        \coordinate (start) at (0,0);
+        \draw 
+        (start) node[nmos](nmos){} 
+        (nmos.G) 
+            to ++(-1,0) 
+            to [sV, l_=$v_s$] ++(0,-1.5)
+            to [V, l_=$V_{GS}$] ++(0,-1) node[ground]{}
+        (nmos.S) 
+            to ++(0,0) node[ground]{}
+        (nmos.D) 
+            to [short, *-o, l=$v_o$] ++(1,0)
+        (nmos.D)
+            to [R, *-*, l=$R_D$] ++(0,2)
+            to ++(2,0)
+            to [V, *-, v=$V_{DD}$] ++(0,-1.5) node[ground]{} 
+        ;
+    \end{circuitikz}
+    \caption{Circuit for this problem}
+\end{figure}

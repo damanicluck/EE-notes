@@ -15,7 +15,9 @@
     % \end{circuitikz}
     \begin{circuitikz}[american voltages]
         \draw 
-            (0,0) coordinate(a) to [short, o-o] ++(10,0) coordinate(b) 
+        (0,0) coordinate(a) 
+            to [short, o-o] ++(10,0) 
+        coordinate(b) 
             to (a) 
             to [open, -o] ++(0,2) coordinate(c)
             to [short,-o, i=$i_G$] ++(1,0)

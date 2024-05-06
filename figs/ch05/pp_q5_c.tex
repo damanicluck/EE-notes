@@ -1,0 +1,51 @@
+\begin{figure}[H]
+    \centering
+    \scalebox{0.9}{
+        \begin{circuitikz}[american voltages]
+            \ctikzset{tripoles/mos style/arrows}
+            \coordinate (start) at (0,0);
+            \draw 
+            (start) node[pmos, bulk](pmos){} 
+            (pmos.G) 
+                to ++(-1,0) 
+                to [sV, l_=$v_s$] ++(0,-1.5)
+                to [V, l_=$V_{SG}$] ++(0,-1) node[ground]{}
+            (pmos.D) 
+                to [short, *-o, l=$v_o$] ++(1,0)
+                to [open] ++(-1,0)
+                to [R, *-, l=$R_D$] ++(0,-2) node[ground]{}
+            (pmos.S)
+                to ++(0,1)
+                to ++(2,0)
+                to [V, *-, v=$V_{DD}$] ++(0,-1.5) node[ground]{} 
+            (pmos.bulk)
+                to ++(0,-1)
+            ;
+        \end{circuitikz}
+        \begin{circuitikz}[scale=0.6, american voltages]
+            \coordinate (leftStart) at (0,0);
+            \coordinate (rightStart) at (14,0);
+            \coordinate (curr1) at (5,0);
+            \coordinate (curr2) at (9,0);
+            \coordinate (res) at (13,0);
+            \draw 
+            (leftStart)
+                to [sV, l=$v_s$] ++(0,-4) node[ground]{}
+                to [open, -*] ++(3,0) node[ground]{}
+                to [open, -*, v<=$v_{GS}$] ++(0,4)
+                to (leftStart) ++(-3,0)
+            (rightStart)
+                to [short, o-, l_=$v_o$] ++(-1,0)
+                to (curr1)
+            (curr1)
+                to [cI, l=$g_m v_{GS}$] ++(0,-4)
+            (curr2)
+                to [cI, l=$g_{mb} V_{BS}$] ++(0,-4)
+            (res)
+                to [R, l=$r_o || R_D$] ++(0,-4)
+                to ++(-10,0)
+            ;
+        \end{circuitikz}
+    }
+    \caption{Circuit for this problem}
+\end{figure}

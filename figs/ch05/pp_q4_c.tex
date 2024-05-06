@@ -1,0 +1,26 @@
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[scale=0.6, american voltages]
+        \coordinate (leftStart) at (0,0);
+        \coordinate (rightStart) at (12,0);
+        \draw 
+        (leftStart)
+            to [sV, l=$v_s$] ++(0,-4) node[ground]{}
+            to [open, -*] ++(3,0) node[ground]{}
+            to [open, -*, v<=$v_{GS}$] ++(0,4)
+            to (leftStart) ++(-3,0)
+        (rightStart)
+            to [short, o-, l_=$v_o$] ++(-1,0)
+            to [R, l=$R_D$] ++(0,-4)
+            to ++(-2,0)
+            to [R, l_=$r_o$] ++(0,4)
+            to ++(-4,0)
+            to [cI, l=$g_m v_{GS}$] ++(0,-4)
+        (leftStart) 
+            to [open] ++(5,0)
+            to ++(7,0)
+            to [open] ++(0,-4)
+            to [short, o-] ++(-9,0)
+        ;
+    \end{circuitikz}
+\end{figure}
