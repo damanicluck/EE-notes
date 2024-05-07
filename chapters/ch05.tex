@@ -103,6 +103,18 @@ Typically, NMOS transistors have greater gain and speed of operations than PMOS 
 Large signal equivalent model of an $n$-channel MOSFET operating in the saturation region
 \input{figs/ch05/large_signal_model.tex}
 
+\section{A More Complete Model}
+
+\input{figs/ch05/complete_nmos.tex}
+
+With this model, we can rewrite \ids as the following:
+    \[i_{DS} = g_m v_{gs} + g_{mb} v_{bs} + \frac{1}{r_o} v_{ds}\]
+We see that the more complete model for the PMOS transistor is also really similar with some minor differences
+
+\input{figs/ch05/complete_pmos.tex}
+
+How does this more complete model affect the amplification effect?
+
 Future chapters will talk about the BJT (bipolar junction transistor). 
 \begin{pline}
     \item MOSFETs can be made smaller than BJTs
@@ -120,6 +132,7 @@ Future chapters will talk about the BJT (bipolar junction transistor).
     \item $C_{gd}$: gate-drain capacitance in saturation
     \item $C_{sb}$: source body capacitance
     \item $C_{db}$: drain body capacitance
+    \item also make tex model for mosfet with the body capacitances and a complete model (lec4/4/24)
 \end{todo}
 \input{practice/pp05.tex}
 

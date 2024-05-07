@@ -230,7 +230,15 @@
 
         \item What is the input resistance $Z_{in}$ as a numerical answer. Consider the source resistor in this computation.
         \begin{Ans}
-            Perform 
+            Perform KCL at node $v_s$, which will rename $V_x$ here.
+            \begin{align*}
+                \frac{V_x}{10k} &= i_{in} + g_m V_{GS} = i_{in} - g_m V_x \\
+                V_x &= 10k(i_{in}) - 10k(g_m V_x) \\
+                V_x (1 + 10k(g_m)) &= 10k(i_{in}) \\
+                \frac{V_x}{i_{in}} &= \frac{10k}{1+10k(g_m)} = \frac{10k}{1+10k(0.15)} \\
+                &= Z_{in} \\
+                &= 6.6622 \Omega
+            \end{align*}
         \end{Ans}
     \end{enumerate}
 \end{enumerate}
