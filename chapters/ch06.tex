@@ -1,0 +1,42 @@
+\chapter{Single Stage Amplifiers}
+If we ignore the body terminal of the MOSFET, we have a three terminal device. Since amplifiers is a four-terminal two-port, then this means that if we use two transistors one terminal must be common with each other. This leads to the following types of single stage amplifiers:
+\begin{pline}
+    \item Common source (CS) amplifier
+    \item Common gate (CG) amplifier 
+    \item Common drain (CD) amplifier
+\end{pline}
+BJT equivalents, respectively, are common emitter, common base, and common collector amplifiers. 
+
+An inductor acts as an open circuit at high frequencies due to its impedance, $j \omega L$ / $j 2 \pi L$. We see that as we increase frequency, the impedance of the inductor increases as well. To summarize. an inductor at DC is a short-circuit and at AC is an open-circuit. The opposite is true for a capacitor. For this reason, infinitely large inductors, or \textbf{chokes}, are used in place of large resistors to isolate the \textit{DC supply or reference voltages} of sensitive circuits from the rest of the noisy system. 
+
+AC coupling capacitors are ideally infinite and blocks DC, but allows AC to flow through.
+
+\section{Common Source Amplifier}
+Has the following parameters:
+\begin{pline}
+    \item Can develop gain
+    \item High input impedance
+    \item Inverting
+\end{pline}
+
+\section{Common Gate Amplifier}
+A common gate amplifier has a current gain of unity, so it acts as a \textbf{current buffer}. It must meet the following requirements:
+\begin{pline}
+    \item Must have a current gain of unity
+    \item Should present a low input impedance
+    \item Should present a high output impedance
+\end{pline}
+
+\section{Common Drain Amplifier}
+The signal input comes into the gate and the signal output leaves through the source and the drain is not grounded here and is instead connected to a DC voltage. Typically used as a \textbf{voltage buffer}.
+
+\begin{todo}
+    \item Insert into appropriate section
+\end{todo}
+
+\input{practice/pp06.tex}
+
+\section{Sources}
+\begin{itemize}
+    \item EE105 Lecture 4/9/2024 by Alp Sipihigal
+\end{itemize}
