@@ -1,4 +1,11 @@
 \chapter{Single Stage Amplifiers}
+From the \textit{Microelectronics} textbook here's a diagram on four amplifier types before going into single stage amplifiers.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{figs/ch06/amplifier_types.png}
+\end{figure}
+In practice, there are other ways of finding input and output resistance, $R_i$ and $R_o$. You can find output resistance by measuring open-circuit output voltage to the short-circuit output current or by eliminating the input signal source and applying some voltage signal $v_x$ to the output of the amplifier. $R_o = v_x \slash i_x$. $i_x$ is the current frawn from $v_x$ into the output terminals. Input resistance can be found by measuring input current and input voltage.
+
 If we ignore the body terminal of the MOSFET, we have a three terminal device. Since amplifiers is a four-terminal two-port, then this means that if we use two transistors one terminal must be common with each other. This leads to the following types of single stage amplifiers:
 \begin{pline}
     \item Common source (CS) amplifier
@@ -20,7 +27,7 @@ Has the following parameters:
 \end{pline}
 
 \section{Common Gate Amplifier}
-A common gate amplifier has a current gain of unity, so it acts as a \textbf{current buffer}. It must meet the following requirements:
+A common gate amplifier has a current gain of unity, so it acts as a \textbf{currentÍ3‹ buffer}. It must meet the following requirements:
 \begin{pline}
     \item Must have a current gain of unity
     \item Should present a low input impedance

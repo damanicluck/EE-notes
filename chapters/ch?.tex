@@ -1,0 +1,27 @@
+\chapter{This is for stuff im too lazy to organize right now}
+
+\section{Miller's Theorem}
+
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}
+        \coordinate (start) at (0,0);
+        \draw 
+        (start) node[op amp] (amp) {}
+        (amp.out) to [short, *-o] ++(1,0) node[label=right:$v_{out}$]{}
+        (amp.out) 
+            to [R, l=R] ++(-2,0)
+            to [amp.-]
+        % to [short, o-*] ++(1,0) node[label=left:S] at (S){}
+        ;
+    \end{circuitikz}
+    % \begin{circuitikz}
+
+    % \end{circuitikz}
+\end{figure}
+
+source: \href{https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Semiconductor_Devices_-_Theory_and_Application_(Fiore)/06%3A_Amplifier_Concepts/6.5%3A_Miller's_Theorem}{text later1}
+
+\section{Second item}
+
+source: 

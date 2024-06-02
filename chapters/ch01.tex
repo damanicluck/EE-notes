@@ -13,22 +13,22 @@ We start learning about resistors, capacitors, and inductors from earlier course
 
 We can also redefine Ohm's Law which we know as ($V = IR$) as $J = \sigma \vb{E}$. We can also write resistance($R$) and conductance($G$) in terms of other variables
 \begin{gline}
-    \item $J$: current density, $A/m^2$ (Amperes per meter squared)
-    \item $\sigma$: conductivity, $S/m$ (Siemens per meter)
-    \item $\vb{E}$: electric field, $V/m$ (Volts per meter)
+    \item $J$: current density, \unit{\ampere\per\meter\squared} (Amperes per meter squared)
+    \item $\sigma$: conductivity, \unit{\siemens\per\meter} (Siemens per meter)
+    \item $\vb{E}$: electric field, \unit{\volt\per\meter} (Volt per meter)
 \end{gline}
 
 $R = \frac{R}{I} = \rho \frac{l}{A}$ and $G = R^{-1} = \sigma \frac{A}{l}$
 \begin{gline}
-    \item $\sigma$: conductivity
-    \item $\rho$: resistivity
+    \item \unit{\sigma}: conductivity
+    \item \unit{\rho}: resistivity
 \end{gline}
 
 For collisions in gas, we focus on the idea that initial velocity and direction is lost/randomized after a few collisions. So, when we sum over the random velocities of the particles and average it, it comes out to zero. Average momentum gain is:
 \[\bar{\mu} = \frac{\vb{E} q \tau}{M} = \mu \vb{E}, ~~~ \mu := \frac{q \tau}{M} = \frac{\bar{v}}{\vb{E}}\]
 \begin{gline}
-    \item $\mu$: mobility, $m^2/ (V \cdot s)$
-    \item $q$: electric charge, $1.60 \times 10^{-19}$, Coulombs = Amperes/second
+    \item $\mu$: mobility, \unit[per-mode=fraction]{\meter\squared\per\volt\per\second}
+    \item $q$: electric charge, \qty{1.60e-19}{}, Coulombs = \unit{\ampere\per\second}
     \item $\tau$: mean free time
     \item $M$: mass
     \item $\bar{v}$: average velocity
@@ -37,15 +37,15 @@ For collisions in gas, we focus on the idea that initial velocity and direction 
 Different elements have a different number of outer shell electrons. For semiconductors like silicon, we can increase the temperature to increase its conductivity. Silicon atoms are arranged in a diamond structure and in general, the energy levels that an atom can occupy are discrete. The \textbf{valence band} electrons are at a lower energy state (bound to host atoms) while \textbf{conduction band} electrons are at a higher energy state and are "free" electrons. These electrons are free to move around the crystal and take part in conduction. 
 
 \section{Conduction and Fermi Dirac Distribution}
-Thermal energy is on average about $\sim 26~eV$ at room temperature How large the \textbf{band-gap}, the gap between the conduction and valence band, determines how conductive a material is:
+Thermal energy is on average about $\sim$ \qty{26}{\eV} at room temperature How large the \textbf{band-gap}, the gap between the conduction and valence band, determines how conductive a material is:
 \begin{itemize}
-    \item Insulators: band gap $\sim$ 15 $eV$
+    \item Insulators: band gap $\sim$ \qty{15}{\eV}
     \begin{itemize}
         \item Glass, rubber, oil, plastic, diamond
     \end{itemize}
-    \item Semiconductors: band gap $\sim 1 eV$
+    \item Semiconductors: band gap $\sim$ \qty{1}{\eV}
     \begin{itemize}
-        \item Silicon = 1.12 $eV$
+        \item Silicon = \qty{1.12}{\eV}
     \end{itemize}
     \item Conductors: Not applicable due to overlapping conduction/valence bands
 \end{itemize}
@@ -57,7 +57,8 @@ Because electrons are a type of particle called a \textbf{fermion}, we can say t
     \item $f(E)$: occupational probability of a state energy $\epsilon$
     \item $E$: energy of the particle
     \item $E_F$: fermi energy, eV
-    \item $k_B$: Boltzmann's constant, $1.380649 \times 10^{-23}$ J/K (Joules per Kelvin), $8.62 \times 10^{-5}$ eV/K
+    \item $k_B$: Boltzmann's constant, \qty{1.380649e-23}{\joule\per\kelvin}, 
+    \qty{8.62e-5}{\eV\per\kelvin}
     \item $T$: temperature in Kelvin
 \end{gline}
 
@@ -74,9 +75,9 @@ Ok so why is this graph significant. To repeat, we can relate the concentration 
 At thermal equilibrium, $n = p = n_i$. We can alternatively express as
 \[pn = n_i^2\]
 \begin{gline}
-    \item $n$: concentration of free electrons, $cm^{-3}$
-    \item $p$: concentration of holes, $cm^{-3}$
-    \item $n_i$: number of free electrons nd holes in a unit volume ($cm^3$) of intrinsic silicon at a given temperature
+    \item $n$: concentration of free electrons, \unit{\concentration}
+    \item $p$: concentration of holes, \unit{\concentration}
+    \item $n_i$: number of free electrons and holes in a unit volume (\unit{\concentration}) of intrinsic silicon at a given temperature
 \end{gline}
 
 We can also write $n_i$ as a function of temperature
@@ -136,22 +137,22 @@ We can dope a semiconductor with both acceptors and donors. A \textbf{compensate
         \begin{Ans}
             \begin{align*}
                 n_{i,1} &= BT^{3/2} e^{-E_G / 2kT} \\
-                &= (7.3 \times 10^{15} \text{cm}^{-3} \text{K}^{-3/2})(50 K)^{3/2} e^{-1.12 eV / 2(8.62 \times 10^{-5} eV/K)(50 K)} \\
-                &= 9.63217875 \times 10^{-39} / \text{cm}^3 \\
-                n_{i,2} &= (7.3 \times 10^{15} \text{cm}^{-3} \text{K}^{-3/2})(350 K)^{3/2} e^{-1.12 eV / 2(8.62 \times 10^{-5} eV/K)(350 K)} \\
-                &= 4.15216354 \times 10^{11} / \text{cm}^3
+                &= (\qty{7.3e15}{\concentration} \unit{\kelvin}^{-3/2})(\qty{50}{\kelvin})^{3/2} e^{\qty{-1.12}{\eV} / 2(\qty{8.62e-5}{\eV\per\kelvin}) (\qty{50}{\kelvin})} \\
+                &= \qty{9.63217875e-39}{\concentration} / \\
+                n_{i,2} &= (\qty{7.3e15}{\concentration} \unit{\kelvin}^{-3/2})(\qty{350}{\kelvin})^{3/2} e^{\qty{-1.12}{\eV} / 2(\qty{8.62e-5}{\eV\per\kelvin})(\qty{350}{\kelvin})} \\
+                &= \qty{4.15216354e11}{\concentration}
             \end{align*}
         \end{Ans}
 
         \item Consider an $n$-type silicon for which the dopant concentration $N_D = 10^{17}$ \conc. Find the electron and hole concentrations at 350 K. Refer to previous example for the value of $n_i$ at $T = 350$ K.
         \begin{Ans}
             Since this is an $n$-type silicon, 
-                \[n_n \simeq N_D = 10^{17} /\text{cm}^3\]
+                \[n_n \simeq N_D = \qty{e17}{\concentration}\]
             From this we can find the concentration of minority holes as 
-                \[p_n \simeq \frac{n_i^2}{N_D} = \frac{(4.15 \times 10^{11})^2}{10^17} = 1.72 \times 10^6 / \text{cm}^3\]
+                \[p_n \simeq \frac{n_i^2}{N_D} = \frac{(\qty{4.15e11}{\concentration})^2}{\qty{e17}{\concentration}} = \qty{1.72e6}{\concentration}\]
         \end{Ans}
 
-        \item Here is a 1 $\mu$m long Si bar doped with $6 \times 10^{15}$ \conc of As and $6 \times 10^{15}$ \conc at 300 K. Assume $n_i =$ \conc. Answer the following questions (show the unit). Assume complete ionization. Use the given figure to find the mobility.
+        \item Here is a 1 $\mu$m long Si bar doped with \qty{6e15}{\concentration} of As and \qty{6e15}{\concentration} at 300 K. Assume $n_i = \unit{concentratation}$. Answer the following questions (show the unit). Assume complete ionization. Use the given figure to find the mobility.
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.8]{figs/ch01/ans3.png}
@@ -160,21 +161,20 @@ We can dope a semiconductor with both acceptors and donors. A \textbf{compensate
             \item Find the concentration of $n$ and $p$.
             \begin{Ans}
                 Arsenic is a donor, meaning that it has 5 valence electrons in its outermost shell.
-                $n \approx 6 \times 10^{15} - 4 \times 10^{15} = 2  \times 10^{15}$
-
-                $p = \frac{n_i^2}{n} = 5 \times 10^4 \text{cm}^{-3}$
+                \[n \approx \qty{6e15}{\concentration}- \qty{4e15}{\concentration} = \qty{2e15}{\concentration}\]
+                \[p = \frac{n_i^2}{n} = \qty{5e4}{\concentration}\]
             \end{Ans}
             
             \item Calculate its resistivity.
             \begin{Ans}
                     \[\rho = \frac{1}{q(\mu_n n + \mu_p p)}\]
-                Looking at the graph we see that at $N_A + N_D = 10^{16}$. $\mu_n \approx 1200$ \mobility and $\mu_p \approx$ \mobility. We can also simplify our equation above as 
-                    \[\rho \approx \frac{1}{q \mu_n n} = 2.6 ~ \Omega ~\text{cm}\]
+                Looking at the graph we see that at $N_A + N_D = 10^{16}$. $\mu_n \approx \qty{1200}{\mobility}$ and $\mu_p \approx$ \qty{330}{\mobility}. We can also simplify our equation above as 
+                    \[\rho \approx \frac{1}{q \mu_n n} = \qty{2.6}{\Omega\per\centi\meter\squared}\]
             \end{Ans}
 
             \item Find the current density when 1 V is applied across the 1 $\mu$m length direction.
             \begin{Ans}
-                \[J = \sigma E = \frac{E}{\rho} = \frac{1}{2.6 \times 10{-4} cm} \approx 3840 \text{ A/cm}^2\]
+                \[J = \sigma E = \frac{E}{\rho} = \frac{1}{\qty{2.6e-4}{\centi\meter}} \approx \qty{3840}{\ampere\per\centi\meter\squared}\]
             \end{Ans}
 
             \item If we keep increasing the voltage, will the current keep increasing?
